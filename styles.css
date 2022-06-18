@@ -63,9 +63,6 @@ nav ul {
     margin: auto;
     max-width: 1200px ;
 }
-footer{
-     margin : 10px;
-}
 
 .pop{
     height: 40%;
@@ -82,11 +79,42 @@ footer{
   margin: 10px;
     border: 1px solid black;
 }
-.foot{
-    margin: 10px;
+footer{
     background-color: rgb(62, 61, 61);
     color: aliceblue;
     text-align: center;
     height: 10vh;
     padding: 20px;
 }
+
+/* pdf view */
+
+main.grid {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-areas: "rt pdfv"
+    "nul det"
+    "nul cmt";
+    row-gap: 1rem;
+}
+
+main.grid > div.rate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: rt;
+}
+
+main.grid > div.pdf-view {
+    grid-area: pdfv;
+}
+
+main.grid > div.details {
+    grid-area: det;
+}
+
+main.grid > div.comments {
+    grid-area: cmt;
+}
+
+/* votes */
