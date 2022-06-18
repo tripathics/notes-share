@@ -2,18 +2,91 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
+}
+.quote{
+     text-align: center;
+     padding: 30px;
+     text-transform: capitalize;
 }
 
 nav {
     display: flex;
+    justify-content: space-evenly;
     padding: 0.8rem;
-    background-color: #ccc;
+   height: 60px ;
+    background-color: rgb(245, 243, 243);
+}
+.search{
+    width: 200px;
+}
+.search input{
+    border-radius: 10px;
+    height: 100%;
+    width: 200px;     
+}
+.topic_nav{
+    padding: 20px;
+    box-shadow: rgb(148, 147, 147) 10px 10px 10px;
+}
+    
+.topic_nav ul {
+    display: flex;
+    justify-content: space-evenly;
+     
+
+}
+.topic_nav ul li{
+    text-decoration: none;
+    list-style: none;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    width: 20%;
     display: flex;
+    justify-content: space-between;
     margin:  0;
+
 }
 
+.side{
+   
+     height: 100vh;
+     width: 25vw;
+     padding: 30px;
+
+}
+.main{
+    padding: 30px;
+    margin: auto;
+    max-width: 1200px ;
+}
+footer{
+     margin : 10px;
+}
+
+.pop{
+    height: 40%;
+
+}
+.pdf_container{
+    display: flex;
+    overflow-x: scroll;
+
+}
+.pdf{
+    width: 30vh;
+    height: 17vh;
+  margin: 10px;
+    border: 1px solid black;
+}
+.foot{
+    margin: 10px;
+    background-color: rgb(62, 61, 61);
+    color: aliceblue;
+    text-align: center;
+    height: 10vh;
+    padding: 20px;
+}
