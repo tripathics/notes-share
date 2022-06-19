@@ -4,9 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes </title>
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Notes share</title>
+    <style>
+        .pdf{
+            position: relative;
+        }
+        .pdf .about-pdf{
+            position: absolute;
+            top:67%; 
+            LEFT: 5%;
+            color: #f6ebf4;
+      background-color: #482673;
+        width: 200px; 
+        padding: 8px;
+        }
+        .logo_something{
+            display: flex;
+          
+        }
+    </style>
+  
 </head>
 <body>
     
+ 
+ 
+    <nav class="navbar">
+        <div class="logo_something">
+        <div class="logo">noteshare</div>
+        
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+         <div class="loged_in"> 
+             <div class="profile_pic"> </div>
+          <div class="profile_text">    <p><i>you are not loged in</i></p>
+                 <h3> <a href="#" id="log-click" >login</a> </h3></div>
+        </div>
+      
+            <li  id="hide_m"><a href="#" class="hide_m">LOG in </a></li>
+            <li><a href="#">About</a></li>
+          
+          </ul>
+         
+        </div>
+    </div>
+        <div class="search">
+            <input type="text" placeholder="Search a topic">
+        </div>
+      </nav>
+    
+
+      <div class="login" id="login">  <div class="wrapper">
+        <div class="title"><h1>welcome</h1>
+        <p>we care so we share be a part of our comunity</p></div>
+        <form action="#">
+          <div class="field">
+            <input type="text" required>
+            <label>Email Address</label>
+          </div>
+          <div class="field">
+            <input type="password" required>
+            <label>Password</label>
+          </div>
+          <div class="content">
+            <div class="checkbox">
+              <input type="checkbox" id="remember-me">
+              <label for="remember-me">Remember me</label>
+            </div>
+            <div class="pass-link"><a href="#">Forgot password?</a></div>
+          </div>
+          <div class="field">
+            <input type="submit" value="Login">
+          </div>
+          <div class="signup-link">Not a member? <a href="./signup.html">Signup now</a></div>
+        </form>
+      </div></div>
+      <div class="search_m">
+        <input type="text" placeholder="Search a topic">
+    </div>
+
+    <div class="container">
+    <!--   <aside class="side">
+            <h2>Similar topics</h2>
+            <ul>
+                <li>DSA</li>
+                <li>Automata</li>
+                <li>English</li>
+            </ul>
+        </aside>--> 
+             <main class="main">
+                <div>
+
+                    <h1> nothing in here </h1>
+                </div>
+        </main>
+    </div>
+
+   
+
+    <footer>
+        Copyright &copy; 2022-Present notesShare
+    </footer>
 </body>
+<script src="./app.js">
+     const wrapper = document.getElementById("login")
+     const log_click = document.getElementById("log-click")
+  
+     log_click.addEventListener('click' ,change);
+     function change(){
+     wrapper.classList.toggle("dis");
+     }
+    </script>
+    
 </html>

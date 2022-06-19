@@ -34,7 +34,7 @@ TEAM NAME : PRO CODERS
 
 1. The idea for making this project comes from here:
 <br>
-We had found that there is exceptionally no such web application where students can read pdf notes from college students/ friends as well as ask their doubts on a specific topics.
+We had found that there is exceptionally no such web application where students can read pdf notes from college students / friends as well as ask their doubts on a specific topics.
 
 
 2.  We had started  creating the application with simple HTML and CSS code.
