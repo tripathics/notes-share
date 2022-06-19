@@ -25,7 +25,6 @@
         }
         .logo_something{
             display: flex;
-          
         }
 
         input
@@ -222,18 +221,7 @@
 
 
 
-  <!-- <div class="voting">
-
-      <button class="js-vote-up-btn flex--item s-btn s-btn__unset c-pointer " data-controller="s-tooltip" data-s-tooltip-placement="right" aria-pressed="false" aria-label="Up vote" data-selected-classes="fc-theme-primary" data-unselected-classes="" aria-describedby="--stacks-s-tooltip-ol7awj6t">
-          <svg aria-hidden="true" class="svg-icon iconArrowUpLg" width="20" height="20" viewBox="0 0 36 36"><path d="M2 25h32L18 9 2 25Z"></path></svg>
-      </button>
-      <div id="--stacks-s-tooltip-ol7awj6t" class="s-popover s-popover__tooltip pe-none wmx2" aria-hidden="true" role="tooltip"> 
-          102
-      </div>
-      <button class="js-vote-down-btn flex--item s-btn s-btn__unset c-pointer " data-controller="s-tooltip" data-s-tooltip-placement="right" aria-pressed="false" aria-label="Down vote" data-selected-classes="fc-theme-primary" data-unselected-classes="" aria-describedby="--stacks-s-tooltip-dccm9zg9">
-          <svg aria-hidden="true" class="svg-icon iconArrowDownLg" width="20" height="20" viewBox="0 0 36 36"><path d="M2 11h32L18 27 2 11Z"></path></svg>
-      </button><div id="--stacks-s-tooltip-dccm9zg9" class="s-popover s-popover__tooltip pe-none" aria-hidden="true" role="tooltip"><div class="s-popover--arrow"></div></div>
-  </div> -->
+  
   <h2>Doubt Qurries</h2>
 
 
@@ -296,176 +284,6 @@
      wrapper.classList.toggle("dis");
      }
     </script>
-  <script type="module">
-
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-    apiKey: "AIzaSyCUTbGVCDA0THWUySE9--2cG2NsE-okJFs",
-    authDomain: "noteshare-b02d3.firebaseapp.com",
-    projectId: "noteshare-b02d3",
-    storageBucket: "noteshare-b02d3.appspot.com",
-    messagingSenderId: "373935912718",
-    appId: "1:373935912718:web:1271f8193213444726495f",
-    measurementId: "G-T9RX5BEEEB"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    // const analytics = getAnalytics(app);
-    import {getDatabase, ref ,get,set, child,update,remove, onValue}
-    from "https://www.gstatic.com/firebasejs/9.8.2/firebase-database.js";
-
-    const db = getDatabase();
-
-
-    var name = document.getElementById("Name");
-    var queryNo = document.getElementById("QueryNo");
-    var comment = document.getElementById("comment");
-    var subject = document.getElementById("SubjectDoubt");
-    var title = document.getElementById("SubTitle");
-
-    var insBtn = document.getElementById("Insbtn");
-
-
-    var stno=0;
-    var tbody = document.getElementById('tbody1');
-
-    function AddItemToTable(name,queryNo,comment,subject,title){
-
-        let trow = document.createElement("tr");
-        let td1 = document.createElement('td');
-        let td2 = document.createElement('td');
-        let td3 = document.createElement('td');
-        let td4 = document.createElement('td');
-        let td5 = document.createElement('td');
-        let td6 = document.createElement('td');
-        
-
-        td1.innerHTML = ++stno;
-        td2.innerHTML = name;
-        td3.innerHTML = subject ;
-        td6.innerHTML = title;
-        td5.innerHTML = comment;
-        td4.innerHTML= queryNo;
-    
-        
-
-       // td6.innerText='<button><img src="https://img.icons8.com/arcade/50/undefined/experimental-edit-arcade.png"/></button>'
-
-
-        trow.appendChild(td1);
-        trow.appendChild(td2);
-        trow.appendChild(td3);
-        trow.appendChild(td4);
-        trow.appendChild(td5);
-        trow.appendChild(td6);
-
-        tbody.appendChild(trow);
-        
-    }
-
-    function AddAllItemsToTable(TheStudent){
-        stno=0;
-        tbody.innerHTML='';
-        TheStudent.forEach(element => {
-            AddItemToTable(element.Name,element.SubTitle,element.Comment,element.Subject,element.Querry);
-        })
-    }
-
-
-    function GetAllDataOnce()
-    {
-        const dbRef= ref(db);
-
-        get(child(dbRef,"NotesShare"))
-        .then((snapshot) => {
-            var student =[];
-
-            snapshot.forEach(childSnapshot =>{
-                student.push(childSnapshot.val());
-            });
-            AddAllItemsToTable(student);
-        })
-    }
-
-    function InsertData()
-    {
-        set(ref(db,"NotesShare/"+queryNo.value),{
-            Name:name.value,
-            SubTitle:title.value,
-            Subject:subject.value,
-            Comment:comment.value,
-            Querry:queryNo.value,
-        })
-        .then(()=>{
-            alert("Data stored sucessfully");
-        })
-        .catch((error)=>{
-            alert("Unsuccesful ,error "+error);
-        });
-    }
-
-
-   // insBtn.addEventListener('click',InsertData);
-
-    function SelectData()
-    {
-        const dbref = ref(db);
-        get(child(dbref,"NotesShare/"+queryNo.value)).then((snapshot)=>{
-            if(snapshot.exists())
-            {
-                name.value = snapshot.val().Name;
-                subject.value = snapshot.val().Subject;
-                comment.value = snapshot.val().Comment;
-            }
-
-            else 
-            {
-                alert("no data found");
-            }
-        })
-        .catch((error)=>{
-            alert("unsucessful , error "+error);
-        });
-    }
-
-    function UpdateData()
-    {
-        update(ref(db,"NotesShare/"+queryNo.value),{
-            Name:name.value,
-            Subject:subject.value,
-            Comment:comment.value,
-        })
-        .then(()=>{
-            alert("Data updated sucessfully");
-        })
-        .catch((error)=>{
-            alert("Unsuccesful ,error "+error);
-        });
-    }
-
-
-    function DeleteData()
-    {
-        remove(ref(db,"NotesShare/"+queryNo.value))
-        .then(()=>{
-            alert("Data deleted sucessfully");
-        })
-        .catch((error)=>{
-            alert("Unsuccesful ,error "+error);
-        });
-    }
-    insBtn.addEventListener('click',InsertData);
-    // selBtn.addEventListener('click',SelectData);
-    // updBtn.addEventListener('click',UpdateData);
-    // delBtn.addEventListener('click',DeleteData);
-
-
-    window.onload = GetAllDataOnce;
-
-</script>
+ 
     
 </html>
