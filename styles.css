@@ -63,9 +63,6 @@ nav ul {
     margin: auto;
     max-width: 1200px ;
 }
-footer{
-     margin : 10px;
-}
 
 .pop{
     height: 40%;
@@ -82,11 +79,77 @@ footer{
   margin: 10px;
     border: 1px solid black;
 }
-.foot{
-    margin: 10px;
+footer{
     background-color: rgb(62, 61, 61);
     color: aliceblue;
     text-align: center;
     height: 10vh;
     padding: 20px;
 }
+
+/* pdf view */
+
+main.grid {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-areas: "rt pdfv"
+    "nul det"
+    "nul cmt";
+    row-gap: 1rem;
+}
+
+main.grid > div.rate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: rt;
+}
+
+main.grid > div.pdf-view {
+    grid-area: pdfv;
+}
+
+main.grid > div.details {
+    grid-area: det;
+}
+
+main.grid > div.comments {
+    grid-area: cmt;
+}
+
+/* votes */
+
+@media screen and (max-width: 680px) {
+    nav ul {
+        display: none;
+    }
+    .container {
+  display: inline-block;
+   cursor: pointer;
+         }
+
+.bar1, .bar2, .bar3 {
+width: 25px;
+height: 3px;
+background-color: #333;
+margin: 4px 0;
+transition: 0.4s;
+}
+
+.change .bar1 {
+-webkit-transform: rotate(-45deg) translate(-4px, 9px);
+transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+-webkit-transform: rotate(45deg) translate(-8px, -8px);
+transform: rotate(45deg) translate(-8px, -8px);
+}
+body{
+overflow-x: hidden;
+}
+
+     
+ }
