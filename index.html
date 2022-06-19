@@ -8,19 +8,24 @@
 
     <title>Notes share</title>
     <style>
-        
+        .pdf{
+            position: relative;
+        }
+        .pdf .about-pdf{
+            position: absolute;
+            top:70%; 
+
+        }
     </style>
-    
+  
 </head>
 <body>
-    <div class="quote title"> " try try but dont cry"</div>
+    
  
  
     <nav class="navbar">
         <div class="logo">noteshare</div>
-         <div class="search">
-            <input type="text" placeholder="Search a topic">
-        </div>
+        
         <a href="#" class="toggle-button">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -33,21 +38,19 @@
           <div class="profile_text">    <p><i>you are not loged in</i></p>
                  <h3> <a href="#" id="log-click" >login</a> </h3></div>
         </div>
-            <li><a href="#"> home </a></li>
+            <li  id="hide_m"><a href="#" class="hide_m">LOG in </a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#"> topics </a></li>
+            <li><a href="#">topics </a></li>
           </ul>
+         
         </div>
-      
+        <div class="search">
+            <input type="text" placeholder="Search a topic">
+        </div>
       </nav>
-      <div class="topic_nav">
-        <ul> <li> dsa</li>
-        <li>automata</li>
-        <li> english</li>
-        </ul>
-    </div>
+    
 
-      <div id="login">  <div class="wrapper">
+      <div class="login" id="login">  <div class="wrapper">
         <div class="title"><h1>welcome</h1>
         <p>we care so we share be a part of our comunity</p></div>
         <form action="#">
@@ -102,13 +105,16 @@
             <h1> computer science </h1>
     
             <div class="pdf_container"> 
-                <div class="pdf">pdf</div>
+                <div class="pdf"> <div class="bkg">pdf</div>
+                    <div class="about-pdf"> <p> daknya bam </p> </div>
+                </div>
                 <div class="pdf">pdf</div>
                 <div class="pdf">pdf</div>
                 <div class="pdf">pdf</div>
                 <div class="pdf">pdf</div>
             
             </div>
+           
             </div>
             <div class="pop">
                 <h1> meow </h1>
@@ -146,11 +152,10 @@
      const wrapper = document.getElementById("login")
      const log_click = document.getElementById("log-click")
   
-     log_click.addEventListener('click' ,change())
-  function change(){
-      console.log("hello")
-      wrapper.classList.toggle('dis')
-  } 
+     log_click.addEventListener('onclick' ,()=>{
+ 
+      wrapper.classList.toggle('dis')// display 
+  } )
     </script>
     
 </html>
