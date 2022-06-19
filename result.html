@@ -7,28 +7,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="styles.css">
+    <style> 
+    .dis{
+        display: block;
+    }
+   #login{
+       display: none;
+   }
+    .hover :hover{
+        cursor: pointer;
+
+    }
+    </style>
     <title>Notes share</title>
 </head>
 
 <body>
-    <div class="quote"> " try try but dont cry"</div>
-    <nav>
-        <div class="logo">notesShare</div>
-        <div class="search">
+    <nav class="navbar">
+        <div class="logo">noteshare</div>
+         <div class="search">
             <input type="text" placeholder="Search a topic">
         </div>
-        <ul>
-
-            <li> <a href="#"> Login </a> </li>
-            <li> <a href="#"> Sign up </a> </li>
-        </ul>
-    </nav>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+         <div class="loged_in"> 
+             <div class="profile_pic"> </div>
+            <p><i>you are not loged in</i></p>
+            <h3 class="hover"> <a  onclick="change()">login</a> </h3>
+        </div>
+            <li><a href="#"> home </a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#"> topics </a></li>
+          </ul>
+        </div>
+      
+      </nav>
+    <hr>
     <div class="topic_nav">
         <ul>
             <li> dsa</li>
             <li>automata</li>
             <li> english</li>
         </ul>
+    </div><div id="login">  <div  id="login_cont" class="wrapper">
+        <div class="title">Welcome</div>
+        <form action="#">
+          <div class="field">
+            <input type="text" required>
+            <label>Email Address</label>
+          </div>
+          <div class="field">
+            <input type="password" required>
+            <label>Password</label>
+          </div>
+          <div class="content">
+            
+            <div class="pass-link"><a href="#">yada hai password?</a></div>
+          </div>
+          <div class="field">
+            <input type="submit" value="Login">
+          </div>
+          <div class="signup-link">account nai hai? <a href="./signup.html">kolna chate ho</a></div>
+        </form>
+      </div></div>
+      <div class="search_m">
+        <input type="text" placeholder="Search a topic">
     </div>
         <!--   <aside class="side">
             <h2>Similar topics</h2>
@@ -89,5 +137,12 @@
         Copyright &copy; 2022-Present notesShare
     </footer>
 </body>
+<script src="./app.js">
+    const wrapper = document.getElementById("login")
+  
+    function change(){
+        wrapper.classList.toggle("dis")
+    } 
+</script>
 
 </html>

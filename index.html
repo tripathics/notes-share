@@ -6,33 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <title>Notes share</title>
+    <style>
+        
+    </style>
+    
 </head>
 <body>
-    <div class="quote"> " try try but dont cry"</div>
-    <nav>
-        <div class="container" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-          </div>
-        <div class="logo">notesShare</div>
-        <div class="search">
+    <div class="quote title"> " try try but dont cry"</div>
+ 
+ 
+    <nav class="navbar">
+        <div class="logo">noteshare</div>
+         <div class="search">
             <input type="text" placeholder="Search a topic">
         </div>
-        <ul>
-           
-            <li> <a href="#"> Login </a> </li>
-            <li> <a href="#"> Sign up </a> </li>
-        </ul>
-    </nav>
-    <div class="topic_nav">
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+         <div class="loged_in"> 
+             <div class="profile_pic"> </div>
+          <div class="profile_text">    <p><i>you are not loged in</i></p>
+                 <h3> <a href="#" id="log-click" >login</a> </h3></div>
+        </div>
+            <li><a href="#"> home </a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#"> topics </a></li>
+          </ul>
+        </div>
+      
+      </nav>
+      <div class="topic_nav">
         <ul> <li> dsa</li>
         <li>automata</li>
         <li> english</li>
         </ul>
     </div>
+
+      <div id="login">  <div class="wrapper">
+        <div class="title"><h1>welcome</h1>
+        <p>we care so we share be a part of our comunity</p></div>
+        <form action="#">
+          <div class="field">
+            <input type="text" required>
+            <label>Email Address</label>
+          </div>
+          <div class="field">
+            <input type="password" required>
+            <label>Password</label>
+          </div>
+          <div class="content">
+            <div class="checkbox">
+              <input type="checkbox" id="remember-me">
+              <label for="remember-me">Remember me</label>
+            </div>
+            <div class="pass-link"><a href="#">Forgot password?</a></div>
+          </div>
+          <div class="field">
+            <input type="submit" value="Login">
+          </div>
+          <div class="signup-link">Not a member? <a href="./signup.html">Signup now</a></div>
+        </form>
+      </div></div>
+      <div class="search_m">
+        <input type="text" placeholder="Search a topic">
+    </div>
+
     <div class="container">
     <!--   <aside class="side">
             <h2>Similar topics</h2>
@@ -88,7 +131,6 @@
                     <div class="pdf">pdf</div>
                     <div class="pdf">pdf</div>
                     <div class="pdf">pdf</div>
-                
                 </div>
                 </div>
         </main>
@@ -100,10 +142,15 @@
         Copyright &copy; 2022-Present notesShare
     </footer>
 </body>
-<script>
-    function myFunction(x) {
-      x.classList.toggle("change");
-    }
+<script src="./app.js">
+     const wrapper = document.getElementById("login")
+     const log_click = document.getElementById("log-click")
+  
+     log_click.addEventListener('click' ,change())
+  function change(){
+      console.log("hello")
+      wrapper.classList.toggle('dis')
+  } 
     </script>
     
 </html>

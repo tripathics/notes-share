@@ -4,19 +4,18 @@
     box-sizing: border-box;
    
 }
+body{
+   
+    background-color: #f6ebf4;
+    }
+    
 .quote{
      text-align: center;
      padding: 30px;
      text-transform: capitalize;
 }
 
-nav {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0.8rem;
-   height: 60px ;
-    background-color: rgb(245, 243, 243);
-}
+
 .search{
     width: 200px;
 }
@@ -27,6 +26,8 @@ nav {
 }
 .topic_nav{
     padding: 20px;
+    background-color:#72c7b5 ;
+    color:  #f6ebf4 ;
     box-shadow: rgb(148, 147, 147) 10px 10px 10px;
 }
     
@@ -118,7 +119,7 @@ main.grid > div.comments {
 }
 
 /* votes */
-
+/*
 @media screen and (max-width: 680px) {
     nav ul {
         display: none;
@@ -147,9 +148,272 @@ transform: rotate(-45deg) translate(-9px, 6px);
 -webkit-transform: rotate(45deg) translate(-8px, -8px);
 transform: rotate(45deg) translate(-8px, -8px);
 }
-body{
-overflow-x: hidden;
-}
 
      
- }
+ }*/
+ nav {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+     background-color:#482673;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.loged_in{
+    display: none;
+  }
+ 
+  
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+      
+       
+    }
+
+    .topic_nav{
+        display: none;
+    }
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+      
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .loged_in{
+        display: flex;
+        flex-direction: row;
+
+    }
+    .search{
+        display: none;
+    }
+    .search_m{
+        width: 100vw;
+        position: absolute;
+        top: 90%;
+    }
+}
+.profile_pic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50% ;
+    border: 1px solid white;
+}
+.loged_in h3 a{
+    text-decoration: none;
+    color: bisque;
+   
+}
+
+.search_m{
+    display: none;
+}
+
+
+
+/* responsive*/
+.dis{
+    display: flex;
+}
+.loged_in p{
+    font-size: small;
+}
+#login{
+    display: none;
+}
+.profile_text{
+    margin: 10px;
+}
+/* log in log out place*/
+::selection{
+    background: #4158d0;
+    color: #fff;
+  }
+  .wrapper{
+      
+    width: 380px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+    margin: auto;
+  }
+  .wrapper .title{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+    user-select: none;
+    border-radius: 15px 15px 0 0;
+   background-color:  #4cbfa6;
+  }
+  .wrapper .title p{
+      font-size: 20px;
+      font-weight: 200;
+      line-height: 40px;
+  }
+  .wrapper form{
+    padding: 10px 30px 50px 30px;
+  }
+  .wrapper form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+  }
+  .wrapper form .field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding-left: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+  .wrapper form .field input:focus,
+  form .field input:valid{
+    border-color: #4158d0;
+  }
+  .wrapper form .field label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    color: #999999;
+    font-weight: 400;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+  }
+  form .field input:focus ~ label,
+  form .field input:valid ~ label{
+    top: 0%;
+    font-size: 16px;
+    color: #4158d0;
+    background: #fff;
+    transform: translateY(-50%);
+  }
+  form .content{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-around;
+  }
+  form .content .checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  form .content input{
+    width: 15px;
+    height: 15px;
+    background: red;
+  }
+  form .content label{
+    color: #262626;
+    user-select: none;
+    padding-left: 5px;
+  }
+ 
+  form .field input[type="submit"]{
+    color: #fff;
+    border: none;
+    padding-left: 0;
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+  background: #4cbfa6;
+    transition: all 0.4s ease;
+  }
+  form .field input[type="submit"]:active{
+    transform: scale(0.95);
+  }
+  form .signup-link{
+    color: #262626;
+    margin-top: 20px;
+    text-align: center;
+  }
+  form .pass-link a,
+  form .signup-link a{
+    color: #4158d0;
+    text-decoration: none;
+  }
+  form .pass-link a:hover,
+  form .signup-link a:hover{
+    text-decoration: underline;
+  }
+  
