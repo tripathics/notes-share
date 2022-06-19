@@ -1,11 +1,16 @@
+
+@import url(https://fonts.google.com/specimen/Roboto?preview.text=helos&preview.text_type=custom#standard-styles);
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
    
 }
 body{
-   
+
     background-color: #f6ebf4;
     }
     
@@ -19,10 +24,13 @@ body{
 .search{
     width: 200px;
 }
+
 .search input{
-    border-radius: 10px;
+    border-radius: 2px;
     height: 100%;
-    width: 200px;     
+    width: 200px; 
+    color: #4158d0;
+    background-color: #72c7b5;    
 }
 .topic_nav{
     padding: 20px;
@@ -67,16 +75,23 @@ nav ul {
 
 .pop{
     height: 40%;
+    max-width: 1200px;
+  
 
 }
+
 .pdf_container{
     display: flex;
     overflow-x: scroll;
-
+    width:inherit;
+ 
+}
+.pop h1{
+           color: #482673;
 }
 .pdf{
-    width: 30vh;
-    height: 17vh;
+    min-width: 200px;
+    height: 30vh;
   margin: 10px;
     border: 1px solid black;
 }
@@ -155,14 +170,17 @@ transform: rotate(45deg) translate(-8px, -8px);
     display: flex;
     position: relative;
     justify-content: space-between;
-    align-items: center;
+ 
      background-color:#482673;
     color: white;
 }
 
 .logo {
     font-size: 1.5rem;
+    font-weight: 300px;
+    text-transform: capitalize;
     margin: .5rem;
+    color:#4cbfa6 ;
 }
 
 
@@ -193,13 +211,14 @@ transform: rotate(45deg) translate(-8px, -8px);
 
 .toggle-button {
     position: absolute;
-    top: .75rem;
+    top: 0.7rem;
     right: 1rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 21px;
+
 }
 
 .toggle-button .bar {
@@ -214,11 +233,14 @@ transform: rotate(45deg) translate(-8px, -8px);
  
   
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
     .navbar {
         flex-direction: column;
-      
+      align-items: flex-start;
        
+    }
+    #hide_m{
+        display: none;
     }
 
     .topic_nav{
@@ -282,15 +304,16 @@ transform: rotate(45deg) translate(-8px, -8px);
 
 
 /* responsive*/
+.login{
+    display: none;
+}
 .dis{
     display: flex;
 }
 .loged_in p{
     font-size: small;
 }
-#login{
-    display: none;
-}
+
 .profile_text{
     margin: 10px;
 }
