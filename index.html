@@ -17,6 +17,10 @@
             LEFT: 5%;
 
         }
+        .logo_something{
+            display: flex;
+          
+        }
     </style>
   
 </head>
@@ -25,6 +29,7 @@
  
  
     <nav class="navbar">
+        <div class="logo_something">
         <div class="logo">noteshare</div>
         
         <a href="#" class="toggle-button">
@@ -33,18 +38,20 @@
           <span class="bar"></span>
         </a>
         <div class="navbar-links">
-          <ul>
+            <ul>
          <div class="loged_in"> 
              <div class="profile_pic"> </div>
           <div class="profile_text">    <p><i>you are not loged in</i></p>
                  <h3> <a href="#" id="log-click" >login</a> </h3></div>
         </div>
+      
             <li  id="hide_m"><a href="#" class="hide_m">LOG in </a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">topics </a></li>
           </ul>
          
         </div>
+    </div>
         <div class="search">
             <input type="text" placeholder="Search a topic">
         </div>
@@ -101,7 +108,7 @@
 
 
                         </div>
-                        
+
                             <div class="about-pdf"> <h6>daknya bam <p> <i> Btect NIT arunchal pradesh</i></p>
                             <p> voted 1000</p></h6> </div>
                         </div>
@@ -234,10 +241,11 @@
      const wrapper = document.getElementById("login")
      const log_click = document.getElementById("log-click")
   
-     log_click.addEventListener('onclick' ,()=>{
+     log_click.addEventListener('click' ,change());
+     function change(){
  
-      wrapper.classList.toggle('dis')// display 
-  } )
+      wrapper.classList.toggle("dis")// display 
+  } 
     </script>
     
 </html>
