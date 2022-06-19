@@ -90,10 +90,14 @@ nav ul {
            color: #482673;
 }
 .pdf{
+
     min-width: 200px;
     height: 30vh;
   margin: 10px;
     border: 1px solid black;
+}
+.pdf:hover{
+    cursor: pointer;
 }
 footer{
     background-color: rgb(62, 61, 61);
@@ -254,6 +258,10 @@ transform: rotate(45deg) translate(-8px, -8px);
         display: none;
     }
 
+    .logo_something{
+        flex-direction: column;
+        align-items: center;
+    }
     .navbar-links ul {
         width: 100%;
         flex-direction: column;
@@ -286,10 +294,15 @@ transform: rotate(45deg) translate(-8px, -8px);
     }
 }
 .profile_pic{
-    width: 100px;
-    height: 100px;
+    margin-left: 10px ;
+    width: 60px;
+    height: 60px;
     border-radius: 50% ;
     border: 1px solid white;
+}
+.profile_text{
+
+    margin: 10px;
 }
 .loged_in h3 a{
     text-decoration: none;
@@ -314,15 +327,10 @@ transform: rotate(45deg) translate(-8px, -8px);
     font-size: small;
 }
 
-.profile_text{
-    margin: 10px;
-}
+
 /* log in log out place*/
-::selection{
-    background: #4158d0;
-    color: #fff;
-  }
-  .wrapper{
+
+.wrapper{
       
     width: 380px;
     background: #fff;
