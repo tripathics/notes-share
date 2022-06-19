@@ -216,7 +216,7 @@ transform: rotate(45deg) translate(-8px, -8px);
 
 .toggle-button {
     position: absolute;
-    top: 0.7rem;
+    top: 1.3rem;
     right: 1rem;
     display: none;
     flex-direction: column;
@@ -244,6 +244,9 @@ transform: rotate(45deg) translate(-8px, -8px);
       align-items: flex-start;
        
     }
+    nav{
+        padding: 10px;
+    }
     #hide_m{
         display: none;
     }
@@ -253,6 +256,7 @@ transform: rotate(45deg) translate(-8px, -8px);
     }
     .toggle-button {
         display: flex;
+        
     }
 
     .navbar-links {
