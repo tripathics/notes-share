@@ -440,3 +440,41 @@ transform: rotate(45deg) translate(-8px, -8px);
     text-decoration: underline;
   }
   
+
+/* #dsa 
+{
+    width:220px;
+    height: 210px;
+}
+
+#cp 
+{
+    width:220px;
+    height: 210px;
+}
+
+#linux 
+{
+    width:220px;
+    height: 210px;
+}
+
+#js 
+{
+    width:220px;
+    height: 210px;
+} */
+
+/* .pdf
+{
+    background-image:url(./media/dsa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.p
+{
+    background-image:url(./media/automata.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
