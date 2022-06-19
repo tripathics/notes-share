@@ -16,9 +16,7 @@
     .dis{
         display: block;
     }
-   #login{
-       display: none;
-   }
+  
     .hover :hover{
         cursor: pointer;
 
@@ -111,9 +109,7 @@
 <body>
     <nav class="navbar">
         <div class="logo">noteshare</div>
-         <div class="search">
-            <input type="text" placeholder="Search a topic">
-        </div>
+         
         <a href="#" class="toggle-button">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -124,46 +120,21 @@
          <div class="loged_in"> 
              <div class="profile_pic"> </div>
             <p><i>you are not loged in</i></p>
-            <h3 class="hover"> <a  onclick="change()">login</a> </h3>
+            <h3 class="hover"> <a href="./login.html">login</a> </h3>
         </div>
-            <li><a href="#"> login</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#"> topics </a></li>
+        <li><a href="./index.html"> HOME</a></li>
+            <li><a href="./login.html"> login</a></li>
+            <li><a href="./about.html">About</a></li>
+          
           </ul>
+          <div class="search">
+            <input type="text" placeholder="Search a topic">
+        </div>
         </div>
       
       </nav>
     <hr>
-    <div class="topic_nav">
-        <ul>
-            <li> dsa</li>
-            <li>automata</li>
-            <li> english</li>
-        </ul>
-    </div><div id="login">  <div  id="login_cont" class="wrapper">
-        <div class="title">Welcome</div>
-        <form action="#">
-          <div class="field">
-            <input type="text" required>
-            <label>Email Address</label>
-          </div>
-          <div class="field">
-            <input type="password" required>
-            <label>Password</label>
-          </div>
-          <div class="content">
-            
-            <div class="pass-link"><a href="#">yada hai password?</a></div>
-          </div>
-          <div class="field">
-            <input type="submit" value="Login">
-          </div>
-          <div class="signup-link">account nai hai? <a href="./signup.html">kolna chate ho</a></div>
-        </form>
-      </div></div>
-      <div class="search_m">
-        <input type="text" placeholder="Search a topic">
-    </div>
+   
         <!--   <aside class="side">
             <h2>Similar topics</h2>
             <ul>
